@@ -43,6 +43,6 @@ console.log(sum); */
    console.log(i);
 } */
 
-for (let i = 5; i >= -5; i = i - 0.5) {
+/* for (let i = 5; i >= -5; i = i - 0.5) {
    console.log(i);
-}
+} */
