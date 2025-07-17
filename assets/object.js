@@ -87,16 +87,46 @@ console.log(user3 === user); //false
 
 /* Методи об'єкту */
 
+/* const user = {
+   firstName: `Test`,
+   lastName: `Testov`,
+   age: 25,
+   password: `12345`,
+   //Методи
+   getFullName: function () {
+      console.log(this === user); // true
+      return `${this.firstName} ${this.lastName}`;
+   },
+   changePassword: function (newPassword) {
+      this.password = newPassword;
+   }
+}; */
+
+/* const userFullName = user.getFullName();
+console.log(userFullName); */
+
+/* user.changePassword(`09876`);
+console.log('user', user); */
+
+//////////////////////
+
+//скороченна форма запису верньохо об'єкту
+
 const user = {
    firstName: `Test`,
    lastName: `Testov`,
    age: 25,
-   password: `12345`
+   password: `12345`,
+   getFullName() {
+      return `${this.firstName} ${this.lastName}`;
+   },
+   changePassword(newPassword) {
+      this.password = newPassword;
+   }
 };
 
-function getFullName(firstName, lastName) {
-   return `${firstName} ${lastName}`;
-}
+const userFullName = user.getFullName();
+console.log(userFullName);
 
-const fullName = getFullName(user.firstName, user.lastName);
-console.log(fullName);
+user.changePassword(`09876`);
+console.log('user', user);
